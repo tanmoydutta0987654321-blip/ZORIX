@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroceryHub - Instant Grocery Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">🛒 ZORIX</a>
+            </div>
+            <div class="navbar-search">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search products...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <ul class="navbar-categories">
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="grocery.html">Fast Delivery</a></li>
+                <li><a href="#categories">Categories</a></li>
+            </ul>
+            <div class="navbar-icons">
+                <a href="login.html" class="nav-link">👤 Login</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    🛒 Cart <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <div class="slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                <div class="slide" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <div class="slide" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+            </div>
+            <button class="slider-btn prev">❮</button>
+            <button class="slider-btn next">❯</button>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="slider-content">
+            <h1>Get Fresh Groceries in 10-20 Minutes</h1>
+            <p>Order from ZORIX and enjoy instant delivery to your doorstep</p>
+            <a href="grocery.html" class="cta-btn">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <h2>Shop by Category</h2>
+        <div class="categories-grid">
+            <div class="category-card" onclick="filterByCategory('Kitchen')">
+                <img src="ASSETS/pan.avif" alt="Kitchen" loading="lazy">
+                <h3>Kitchen</h3>
+            </div>
+            <div class="category-card" onclick="filterByCategory('Kids')">
+                <img src="ASSETS/lego.avif" alt="Kids" loading="lazy">
+                <h3>Kids</h3>
+            </div>
+            <div class="category-card" onclick="filterByCategory('Pets')">
+                <img src="ASSETS/pets.webp" alt="Pets" loading="lazy">
+                <h3>Pets</h3>
+            </div>
+            <div class="category-card" onclick="filterByCategory('Gym')">
+                <img src="ASSETS/gym.jpg" alt="Gym" loading="lazy">
+                <h3>Gym</h3>
+            </div>
+            <div class="category-card" onclick="filterByCategory('Fashion')">
+                <img src="ASSETS/jacket.avif" alt="Fashion" loading="lazy">
+                <h3>Fashion</h3>
+            </div>
+            <div class="category-card" onclick="filterByCategory('Electronics')">
+                <img src="ASSETS/mobile.avif" alt="Electronics" loading="lazy">
+                <h3>Electronics</h3>
+            </div>
+            <div class="category-card" onclick="filterByCategory('Mobile')">
+                <img src="ASSETS/bicycle.avif" alt="Mobile" loading="lazy">
+                <h3>Mobile</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner Slider -->
+    <section class="promo-slider">
+        <div class="promo-wrapper">
+            <div class="promo-slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="promo-content">
+                    <h3>Special Offer</h3>
+                    <p>Get 30% Off on First Order</p>
+                </div>
+            </div>
+            <div class="promo-slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="promo-content">
+                    <h3>Free Shipping</h3>
+                    <p>On Orders Above $50</p>
+                </div>
+            </div>
+            <div class="promo-slide" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                <div class="promo-content">
+                    <h3>Loyalty Rewards</h3>
+                    <p>Earn Points on Every Purchase</p>
+                </div>
+            </div>
+        </div>
+        <button class="promo-btn prev">❮</button>
+        <button class="promo-btn next">❯</button>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="products-grid" id="featuredProducts">
+            <!-- Products will be loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>ZORIX is your trusted partner for instant grocery delivery</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="grocery.html">Fast Delivery</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">🐦 Twitter</a>
+                    <a href="#">📷 Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ZORIX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initHeroSlider();
+            loadFeaturedProducts();
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>
